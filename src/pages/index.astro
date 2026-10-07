@@ -1,0 +1,84 @@
+---
+import '../styles/global.css';
+
+const year = new Date().getFullYear();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Website Edit Request | Alpha Dog Agency</title>
+    <meta
+      name="description"
+      content="Need a change made to your website? Submit your website edit request to the Alpha Dog Agency team."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#1b3b1f" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preload" href="/fonts/satoshi-medium.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preconnect" href="https://alphadogagency.formstack.com" />
+    <link rel="preconnect" href="https://static.formstack.com" crossorigin />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="https://www.alphadogagency.com/" aria-label="Alpha Dog Agency home">
+          <img src="/images/alpha-dog-logo.png" width="180" height="72" alt="Alpha Dog Agency" fetchpriority="high" />
+        </a>
+        <span class="header-label">Client requests</span>
+      </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <div class="page-container">
+        <div class="intro">
+          <span class="brand-accent" aria-hidden="true"></span>
+          <h1>Website Edit Request</h1>
+          <p>Need a change made to your website? Submit the details below and our team will take care of it.</p>
+        </div>
+
+        <section class="request-card" aria-label="Website edit request form">
+          <div class="card-heading">
+            <h2>Let’s make your updates.</h2>
+            <p>Share the details, page links, and any files we’ll need.</p>
+          </div>
+
+          <div id="request-form" class="form-embed">
+            <!-- Formstack uses document.write. Keep this classic script in place,
+                 without async, defer, a client router, or Astro bundling. -->
+            <script is:inline type="text/javascript" src="https://alphadogagency.formstack.com/forms/js.php/alpha_dog_web_edit_request"></script>
+            <noscript>
+              <a href="https://alphadogagency.formstack.com/forms/alpha_dog_web_edit_request" title="Online Form">
+                Online Form - Alpha Dog - Web Edit Request
+              </a>
+            </noscript>
+          </div>
+
+          <div class="form-help">
+            <p>
+              Having trouble with the form?
+              <a href="https://alphadogagency.formstack.com/forms/alpha_dog_web_edit_request" target="_blank" rel="noopener noreferrer">
+                Open it in a new tab
+                <svg aria-hidden="true" viewBox="0 0 16 16" width="14" height="14" fill="none">
+                  <path d="M4 12 12 4M4 4h8v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p>© {year} Alpha Dog Agency. All rights reserved.</p>
+        <a href="https://www.alphadogagency.com/">alphadogagency.com</a>
+      </div>
+    </footer>
+  </body>
+</html>
